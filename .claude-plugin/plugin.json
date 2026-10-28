@@ -1,0 +1,7 @@
+{
+  "name": "english-coach",
+  "version": "0.1.0",
+  "description": "Checks the English of each prompt with Haiku and lists the corrections in a side pane, without changing what is sent",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}
