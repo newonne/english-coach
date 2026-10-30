@@ -36,6 +36,17 @@ claude plugin install english-coach --marketplace newonne/english-coach
 
 No app desktop (onde `/plugin` não roda): clique no **+** ao lado da caixa de prompt → **Plugins** → **Add marketplace** com `newonne/english-coach` → **Add plugin**.
 
+## Atualização
+
+Pelo shell, busque a versão nova do marketplace e atualize o mod:
+
+```
+claude plugin marketplace update english-coach
+claude plugin update english-coach
+```
+
+Depois reinicie o Claude Code (ou rode `/reload-plugins` numa sessão aberta) para carregar a versão nova.
+
 ## Como usar
 
 - Digite `/english` para abrir o painel **English**. Ele não abre sozinho; a revisão roda mesmo com o painel fechado.
