@@ -1,18 +1,22 @@
 # english-coach
 
-Mod para o Claude Code que ajuda a treinar inglês enquanto você trabalha. Cada mensagem que você escreve em inglês é revisada pelo Claude Haiku, e as correções aparecem num painel ao lado do chat, com uma explicação curta em português de cada erro.
+Mod para o Claude Code que ajuda a treinar inglês enquanto você trabalha. Cada mensagem que você escreve em inglês é revisada pelo Claude Haiku, e as correções aparecem num painel ao lado do chat, com uma explicação curta em português de cada erro. No mesmo painel dá para tirar dúvidas com um tutor, sobre uma correção ou sobre qualquer coisa de inglês.
 
 A mensagem é enviada **exatamente como você escreveu**: o mod não altera nada e não atrasa o envio. A correção roda em paralelo e aparece no painel 1–2 segundos depois.
 
 ![O painel English ao lado do chat, corrigindo "hey, i'm just test my english"](assets/coach.png)
 
 ```
-42 checked · 31 perfect  [Clear]
-
-✗ I have did the tests yesterday
-✓ I did the tests yesterday
-  • "I have did" → "I did": com "yesterday" usa-se o passado simples
+ Correções 2   Conversa                    Limpar
+──────────────────────────────────────────────────
+                                       Discutir ›
+▎ I have did the tests yesterday
+▎
+▎ have did → did  verbo
+▎   com "yesterday" usa-se o passado simples
 ```
+
+(No painel, `have` aparece riscado em vermelho.)
 
 ## Instalação
 
@@ -34,10 +38,13 @@ No app desktop (onde `/plugin` não roda): clique no **+** ao lado da caixa de p
 
 ## Como usar
 
-- O painel **English** abre sozinho quando o terminal tem largura suficiente (~144 colunas). Em janelas menores, digite `/english` para abrir.
-- Escreva seus pedidos em inglês normalmente. Se houver erro, ele aparece no painel: em vermelho o que você escreveu, em verde a versão corrigida, e embaixo o motivo.
-- O topo do painel mostra quantas mensagens foram revisadas e quantas estavam perfeitas. **Clear** apaga o histórico.
-- O histórico é mantido entre sessões.
+- Digite `/english` para abrir o painel **English**. Ele não abre sozinho; a revisão roda mesmo com o painel fechado.
+- Escreva seus pedidos em inglês normalmente. Se houver erro, ele aparece na aba **Correções**: a frase uma vez só, com o que estava errado riscado em vermelho e o certo em verde, e embaixo cada erro com o tipo (verbo, preposição, maiúscula…) e a regra numa linha.
+- **Discutir ›** abre uma conversa com o tutor sobre aquela correção. Cada correção tem a sua conversa, que continua lá quando você volta.
+- A aba **Conversa** é um chat livre com o tutor, sem nenhuma correção junto: dá para perguntar, por exemplo, como se diz alguma coisa em inglês.
+- O tutor responde em português, com os exemplos em inglês. As conversas são chamadas separadas ao Haiku e não entram no contexto da sua sessão do Claude.
+- Cada sessão do Claude tem o seu painel: uma sessão nova ou um `/clear` começa vazio, e um `--resume` traz de volta as correções e conversas daquela sessão. **Limpar** apaga as correções da sessão.
+- Com o painel em foco: **1** abre Correções, **2** abre Conversa e **d** discute a correção mais recente.
 
 ## O que não é revisado
 
@@ -50,7 +57,7 @@ Detalhes de chat casual, como começar com letra minúscula ou não colocar pont
 
 ## Custo
 
-Cada mensagem em inglês faz uma chamada curta ao Claude Haiku, cobrada na mesma conta/credenciais da sua sessão do Claude Code. É um custo bem baixo, mas existe.
+Cada mensagem em inglês faz uma chamada curta ao Claude Haiku, e cada pergunta ao tutor faz mais uma, cobradas na mesma conta/credenciais da sua sessão do Claude Code. É um custo bem baixo, mas existe.
 
 ## Licença
 
