@@ -4,7 +4,7 @@ Mod para o Claude Code que ajuda a treinar inglês enquanto você trabalha. Cada
 
 A mensagem é enviada **exatamente como você escreveu**: o mod não altera nada e não atrasa o envio. A correção roda em paralelo e aparece no painel 1–2 segundos depois.
 
-![O painel English ao lado do chat, corrigindo "hey, i'm just test my english"](assets/coach.png)
+![O painel English ao lado do chat: duas correções com as palavras erradas riscadas, as certas em verde e o botão Discutir](assets/coach.png)
 
 ```
  Correções 2   Conversa                    Limpar
